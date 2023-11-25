@@ -125,6 +125,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     flexDirection: "row",
     justifyContent: "flex-start",
+    fontFamily: "SF-Pro-Rounded",
   },
   correctBg: {
     backgroundColor: "rgba(40, 177, 143, 0.70)",

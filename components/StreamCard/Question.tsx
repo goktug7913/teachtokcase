@@ -21,6 +21,7 @@ export default function Question({ question }: QuestionProps) {
           color: "#fdfdfd",
           fontSize: 26,
           fontWeight: "500",
+          fontFamily: "SF-Pro-Rounded",
         }}
       >
         {question}

@@ -50,7 +50,14 @@ export default function ActionBar({ user }: ActionBarProps) {
             left: 14,
           }}
         >
-          <Text style={{ color: "#fff", fontSize: 20, fontWeight: "700" }}>
+          <Text
+            style={{
+              color: "#fff",
+              fontSize: 20,
+              fontWeight: "700",
+              fontFamily: "SF-Pro-Rounded",
+            }}
+          >
             +
           </Text>
         </View>
@@ -58,22 +65,22 @@ export default function ActionBar({ user }: ActionBarProps) {
 
       <View style={styles.actionContainer}>
         <Like />
-        <Text style={styles.actionText}>22</Text>
+        <Text style={styles.actionText}>54</Text>
       </View>
 
       <View style={styles.actionContainer}>
         <Comment />
-        <Text style={styles.actionText}>22</Text>
+        <Text style={styles.actionText}>12</Text>
       </View>
 
       <View style={styles.actionContainer}>
         <Bookmark />
-        <Text style={styles.actionText}>22</Text>
+        <Text style={styles.actionText}>27</Text>
       </View>
 
       <View style={styles.actionContainer}>
         <Share />
-        <Text style={styles.actionText}>22</Text>
+        <Text style={styles.actionText}>61</Text>
       </View>
     </View>
   );
@@ -86,6 +93,7 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     letterSpacing: -0.12,
     marginTop: 4,
+    fontFamily: "SF-Pro-Rounded",
   },
   actionContainer: {
     justifyContent: "space-between",

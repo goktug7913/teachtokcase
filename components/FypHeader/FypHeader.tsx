@@ -61,7 +61,7 @@ export default function FypHeader() {
               style={{
                 color: "rgba(255, 255, 255, 0.60)",
                 fontSize: 14,
-                // fontFamily: "SF Pro Rounded",
+                fontFamily: "SF-Pro-Rounded",
                 fontWeight: "400",
                 marginLeft: 4,
               }}
@@ -86,6 +86,7 @@ export default function FypHeader() {
                 fontSize: 20,
                 fontWeight: "bold",
                 textAlign: "center",
+                fontFamily: "SF-Pro-Rounded",
               }}
             >
               For You

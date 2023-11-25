@@ -6,9 +6,28 @@ import Activity from "../assets/BottomNavIcons/Activity.svg";
 import Profile from "../assets/BottomNavIcons/Profile.svg";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { useFonts } from "expo-font";
+import { SplashScreen } from "expo-router";
+import { useCallback } from "react";
 
 export default function AppLayout() {
   const queryClient = new QueryClient();
+
+  const [fontsLoaded] = useFonts({
+    "SF-Pro-Rounded": require("../assets/SF-Pro-Rounded-Regular.otf"),
+  });
+
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) {
+    // We don't want to render anything until fonts have loaded
+    return null;
+  }
+
   return (
     <QueryClientProvider client={queryClient}>
       <SafeAreaProvider>
@@ -25,6 +44,7 @@ export default function AppLayout() {
             },
             tabBarActiveTintColor: "#ffffff",
             tabBarLabelStyle: {
+              fontFamily: "SF-Pro-Rounded",
               fontSize: 12,
               margin: 0,
               padding: 0,

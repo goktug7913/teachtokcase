@@ -25,6 +25,7 @@ export default function PlaylistBar({ playlistName }: PlaylistBarProps) {
           color: "#fdfdfd",
           fontSize: 13,
           fontWeight: "600",
+          fontFamily: "SF-Pro-Rounded",
         }}
       >
         Playlist • {playlistName}

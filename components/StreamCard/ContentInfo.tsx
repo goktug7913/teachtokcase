@@ -8,6 +8,7 @@ interface ContentInfoProps {
 
 export default function ContentInfo(data: ContentInfoProps) {
   const renderDescription = () => {
+    // Split the description into words to extract hashtags
     const words = data.description.split(" ");
     return words.map((word, index) =>
       // Make hashtags bold
@@ -27,13 +28,7 @@ export default function ContentInfo(data: ContentInfoProps) {
     <View style={styles.contentInfo}>
       <Text style={styles.username}>{data.username}</Text>
 
-      <View
-        style={{
-          flexDirection: "row",
-        }}
-      >
-        {renderDescription()}
-      </View>
+      <View style={styles.descriptionContainer}>{renderDescription()}</View>
     </View>
   );
 }
@@ -43,16 +38,23 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: "#fff",
     fontWeight: "600",
+    fontFamily: "SF-Pro-Rounded",
+  },
+  descriptionContainer: {
+    flexDirection: "row",
+    alignItems: "center",
   },
   description: {
     fontSize: 13,
     color: "#fff",
     fontWeight: "400",
+    fontFamily: "SF-Pro-Rounded",
   },
   hashtag: {
     fontSize: 13,
     color: "#fff",
     fontWeight: "bold",
+    fontFamily: "SF-Pro-Rounded",
   },
   contentInfo: {},
 });
