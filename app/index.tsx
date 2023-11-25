@@ -4,28 +4,10 @@ import FypHeader from "../components/FypHeader/FypHeader";
 import { useQuery } from "react-query";
 import axiosClient from "../api/axiosClient";
 import { useState } from "react";
+import { MultipleChoiceQuestion } from "../interfaces/FypApiResponse";
 
 const url = "/for_you";
-interface MultipleChoiceQuestion {
-  type: string;
-  id: number;
-  playlist: string;
-  description: string;
-  image: string;
-  question: string;
-  options: Option[];
-  user: User;
-}
 
-interface Option {
-  id: string;
-  answer: string;
-}
-
-interface User {
-  name: string;
-  avatar: string;
-}
 export default function Index() {
   const batch_size = 3;
   const [data, setData] = useState<Array<MultipleChoiceQuestion>>([]);

@@ -17,7 +17,7 @@ export default function AppLayout() {
     "SF-Pro-Rounded": require("../assets/SF-Pro-Rounded-Regular.otf"),
   });
 
-  const onLayoutRootView = useCallback(async () => {
+  useCallback(async () => {
     if (fontsLoaded) {
       await SplashScreen.hideAsync();
     }
